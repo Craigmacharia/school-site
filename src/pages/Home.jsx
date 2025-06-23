@@ -285,7 +285,7 @@ const Home = () => {
                       </a>
                     </li>
                     <li className="mb-2">
-                      <a href="/admissions" className="text-white text-decoration-none hover-underline">
+                      <a href="admissions" className="text-white text-decoration-none hover-underline">
                         Admissions
                       </a>
                     </li>
