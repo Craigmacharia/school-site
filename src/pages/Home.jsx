@@ -180,8 +180,8 @@ const Home = () => {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <Carousel.Caption className="bg-dark bg-opacity-50 p-3 rounded">
-                <h5>Interactive Classroom Learning</h5>
+              <Carousel.Caption className="bg-brown bg-opacity-50 p-2 rounded">
+                <h5>Interactive Learning</h5>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -193,8 +193,8 @@ const Home = () => {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <Carousel.Caption className="bg-dark bg-opacity-50 p-3 rounded">
-                <h5>Modern Science Laboratories</h5>
+              <Carousel.Caption className="bg-brown bg-opacity-50 p-2 rounded">
+                <h5>Modern Laboratories</h5>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -206,8 +206,8 @@ const Home = () => {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <Carousel.Caption className="bg-dark bg-opacity-50 p-3 rounded">
-                <h5>Comprehensive Sports Facilities</h5>
+              <Carousel.Caption className="bg-brown bg-opacity-50 p-2 rounded">
+                <h5>Comprehensive Facilities</h5>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
