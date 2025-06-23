@@ -180,8 +180,8 @@ const Home = () => {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <Carousel.Caption className="bg-brown bg-opacity-50 p-2 rounded">
-                <h5>Interactive Learning</h5>
+              <Carousel.Caption className="bg-dark bg-opacity-50 p-1 rounded">
+                <h5>Learning</h5>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -193,8 +193,8 @@ const Home = () => {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <Carousel.Caption className="bg-brown bg-opacity-50 p-2 rounded">
-                <h5>Modern Laboratories</h5>
+              <Carousel.Caption className="bg-dark bg-opacity-50 p-1 rounded">
+                <h5>Laboratories</h5>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -206,65 +206,16 @@ const Home = () => {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <Carousel.Caption className="bg-brown bg-opacity-50 p-2 rounded">
-                <h5>Comprehensive Facilities</h5>
+              <Carousel.Caption className="bg-dark bg-opacity-50 p-1 rounded">
+                <h5>Facilities</h5>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </motion.div>
       </Container>
 
-      {/* Call to Action */}
-      <div 
-        className="py-5 text-center text-white"
-        style={{ 
-          background: 'linear-gradient(135deg, #6f4e37 0%, #8b6b4b 100%)'
-        }}
-      >
-        <Container>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="mb-4">Ready to Join Our Community?</h2>
-            <div className="d-flex justify-content-center gap-3">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button 
-                  variant="outline-light" 
-                  size="lg"
-                  style={{ 
-                    fontFamily: "'Comfortaa', cursive",
-                    fontWeight: '600'
-                  }}
-                >
-                  Apply Now
-                </Button>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button 
-                  variant="light" 
-                  size="lg"
-                  style={{ 
-                    fontFamily: "'Comfortaa', cursive",
-                    color: '#6f4e37',
-                    fontWeight: '600'
-                  }}
-                >
-                  Schedule a Visit
-                </Button>
-              </motion.div>
-            </div>
-          </motion.div>
-        </Container>
-      </div>
+      
+        
 
       {/* Footer */}
       <footer 
@@ -372,31 +323,7 @@ const Home = () => {
               </Row>
             </Col>
 
-            {/* Social & Newsletter Column */}
-            <Col lg={4}>
-              <h5 className="mb-3" style={{ fontWeight: '600', color: '#d1c7b7' }}>Stay Connected</h5>
-              
-              {/* Social Media */}
-              <div className="mb-4">
-                <div className="d-flex gap-2 mb-3">
-                  {['facebook', 'twitter', 'instagram', 'youtube', 'linkedin'].map((platform) => (
-                    <a 
-                      key={platform}
-                      href="#" 
-                      className="social-icon d-flex align-items-center justify-content-center"
-                      style={{
-                        width: '36px',
-                        height: '36px',
-                        borderRadius: '50%',
-                        backgroundColor: 'rgba(255,255,255,0.1)',
-                        color: 'white',
-                        transition: 'all 0.3s ease'
-                      }}
-                    >
-                      <i className={`bi bi-${platform}`}></i>
-                    </a>
-                  ))}
-                </div>
+            
                 
                 {/* WhatsApp CTA */}
                 <div 
@@ -426,36 +353,13 @@ const Home = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+                </Row>
+                
+                
               
-              {/* Newsletter */}
-              <div className="newsletter">
-                <h6 className="mb-2" style={{ color: '#d1c7b7' }}>Subscribe to our newsletter</h6>
-                <Form className="d-flex">
-                  <Form.Control 
-                    type="email" 
-                    placeholder="Your email" 
-                    className="rounded-0 border-0"
-                    style={{ 
-                      fontFamily: "'Comfortaa', cursive",
-                      backgroundColor: 'rgba(255,255,255,0.9)'
-                    }}
-                  />
-                  <Button 
-                    variant="primary" 
-                    className="rounded-0"
-                    style={{ 
-                      fontFamily: "'Comfortaa', cursive",
-                      backgroundColor: '#6f4e37',
-                      borderColor: '#6f4e37'
-                    }}
-                  >
-                    Subscribe
-                  </Button>
-                </Form>
-              </div>
-            </Col>
-          </Row>
+              
+              
+                  
 
           {/* Copyright */}
           <hr className="my-4" style={{ borderColor: 'rgba(255,255,255,0.1)' }} />
