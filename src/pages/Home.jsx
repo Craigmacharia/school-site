@@ -1,9 +1,7 @@
 import React from 'react';
-import { Container, Row, Col, Button, Card, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Button, Card, Carousel, Form } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaSchool, FaRunning, FaChalkboardTeacher, FaWhatsapp } from 'react-icons/fa';
-import { IoLibraryOutline, IoCalendarOutline } from 'react-icons/io5';
-import { BsBook, BsLaptop } from 'react-icons/bs';
 import 'animate.css';
 
 const Home = () => {
@@ -16,12 +14,12 @@ const Home = () => {
     },
     {
       title: "Modern Facilities",
-      description: "State-of-the-art classrooms and laboratories for research",
+      description: "State-of-the-art classrooms and laboratories",
       icon: <FaSchool size={32} />
     },
     {
       title: "Sports & Arts",
-      description: "Comprehensive extracurricular programs included for excelence",
+      description: "Comprehensive extracurricular programs and sports",
       icon: <FaRunning size={32} />
     },
     {
@@ -273,49 +271,206 @@ const Home = () => {
         className="py-5"
         style={{ 
           backgroundColor: '#4a3520',
-          color: 'white'
+          color: 'white',
+          borderTop: '3px solid #6f4e37'
         }}
       >
         <Container>
-          <Row>
+          <Row className="g-4">
+            {/* School Info Column */}
             <Col lg={4} className="mb-4">
-              <h5 className="mb-3">Snowview Complex Academy</h5>
-              <p className="mb-2">
-                <i className="bi bi-geo-alt me-2"></i>
-                P.O. Box 12345, Nairobi, Kenya
-              </p>
-              <p className="mb-2">
-                <i className="bi bi-telephone me-2"></i>
-                +254 755 453 975
-              </p>
-              <p className="mb-0">
-                <i className="bi bi-envelope me-2"></i>
-                admissions@snowview.edu
-              </p>
-            </Col>
-            <Col lg={4} className="mb-4">
-              <h5 className="mb-3">Quick Links</h5>
-              <div className="d-flex flex-column">
-                <a href="admissions" className="text-white mb-2">Admissions</a>
-                <a href="downloads" className="text-white mb-2">Downloads</a>
-                <a href="gallery" className="text-white mb-2">Gallery</a>
-                <a href="contact" className="text-white">Contact Us</a>
+              <div className="d-flex flex-column h-100">
+                <div className="d-flex align-items-center mb-3">
+                  <img 
+                    src="/h.jpg" 
+                    alt="School Logo" 
+                    style={{ 
+                      height: '60px', 
+                      width: 'auto',
+                      marginRight: '15px',
+                      borderRadius: '8px'
+                    }}
+                  />
+                  <h5 style={{ fontWeight: '600', margin: 0 }}>Snowview Complex Academy</h5>
+                </div>
+                
+                <div className="mb-4">
+                  <p style={{ lineHeight: '1.6' }}>
+                    A premier educational institution committed to academic excellence and holistic development.
+                  </p>
+                </div>
+                
+                <div className="contact-info">
+                  <div className="d-flex align-items-center mb-2">
+                    <i className="bi bi-geo-alt-fill me-2" style={{ color: '#d1c7b7' }}></i>
+                    <span>P.O. Box 12345, Nairobi, Kenya</span>
+                  </div>
+                  <div className="d-flex align-items-center mb-2">
+                    <i className="bi bi-telephone-fill me-2" style={{ color: '#d1c7b7' }}></i>
+                    <a href="tel:+254755453975" className="text-white text-decoration-none">+254 755 453 975</a>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-envelope-fill me-2" style={{ color: '#d1c7b7' }}></i>
+                    <a href="mailto:admissions@snowview.edu" className="text-white text-decoration-none">admissions@snowview.edu</a>
+                  </div>
+                </div>
               </div>
             </Col>
-            </Row>
+
+            {/* Quick Links Column */}
+            <Col lg={4} className="mb-4">
+              <h5 className="mb-3" style={{ fontWeight: '600', color: '#d1c7b7' }}>Quick Links</h5>
+              <Row>
+                <Col sm={6}>
+                  <ul className="list-unstyled">
+                    <li className="mb-2">
+                      <a href="/" className="text-white text-decoration-none hover-underline">
+                        Home
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/about" className="text-white text-decoration-none hover-underline">
+                        About Us
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/admissions" className="text-white text-decoration-none hover-underline">
+                        Admissions
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/academics" className="text-white text-decoration-none hover-underline">
+                        Academics
+                      </a>
+                    </li>
+                  </ul>
+                </Col>
+                <Col sm={6}>
+                  <ul className="list-unstyled">
+                    <li className="mb-2">
+                      <a href="/downloads" className="text-white text-decoration-none hover-underline">
+                        Downloads
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/gallery" className="text-white text-decoration-none hover-underline">
+                        Gallery
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/news" className="text-white text-decoration-none hover-underline">
+                        News & Events
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/contact" className="text-white text-decoration-none hover-underline">
+                        Contact Us
+                      </a>
+                    </li>
+                  </ul>
+                </Col>
+              </Row>
+            </Col>
+
+            {/* Social & Newsletter Column */}
             <Col lg={4}>
-              <h5 className="mb-3">Connect With Us</h5>
-              <div className="d-flex gap-3 mb-3">
-                <a href="#" className="text-white fs-4"><i className="bi bi-facebook"></i></a>
-                <a href="#" className="text-white fs-4"><i className="bi bi-twitter"></i></a>
-                <a href="#" className="text-white fs-4"><i className="bi bi-instagram"></i></a>
-                <a href="https://wa.me/254755453975" className="text-white fs-4"><i className="bi bi-whatsapp"></i></a>
+              <h5 className="mb-3" style={{ fontWeight: '600', color: '#d1c7b7' }}>Stay Connected</h5>
+              
+              {/* Social Media */}
+              <div className="mb-4">
+                <div className="d-flex gap-2 mb-3">
+                  {['facebook', 'twitter', 'instagram', 'youtube', 'linkedin'].map((platform) => (
+                    <a 
+                      key={platform}
+                      href="#" 
+                      className="social-icon d-flex align-items-center justify-content-center"
+                      style={{
+                        width: '36px',
+                        height: '36px',
+                        borderRadius: '50%',
+                        backgroundColor: 'rgba(255,255,255,0.1)',
+                        color: 'white',
+                        transition: 'all 0.3s ease'
+                      }}
+                    >
+                      <i className={`bi bi-${platform}`}></i>
+                    </a>
+                  ))}
+                </div>
+                
+                {/* WhatsApp CTA */}
+                <div 
+                  className="d-flex align-items-center p-3 rounded" 
+                  style={{ 
+                    backgroundColor: 'rgba(255,255,255,0.1)',
+                    borderRadius: '8px'
+                  }}
+                >
+                  <div 
+                    className="rounded-circle d-flex align-items-center justify-content-center me-3"
+                    style={{
+                      width: '44px',
+                      height: '44px',
+                      backgroundColor: '#25D366'
+                    }}
+                  >
+                    <i className="bi bi-whatsapp text-white fs-5"></i>
+                  </div>
+                  <div>
+                    <p className="mb-1 small">Need immediate assistance?</p>
+                    <a 
+                      href="https://wa.me/254755453975" 
+                      className="text-white text-decoration-none fw-bold"
+                    >
+                      Chat on WhatsApp
+                    </a>
+                  </div>
+                </div>
               </div>
-              </Col>
+              
+              {/* Newsletter */}
+              <div className="newsletter">
+                <h6 className="mb-2" style={{ color: '#d1c7b7' }}>Subscribe to our newsletter</h6>
+                <Form className="d-flex">
+                  <Form.Control 
+                    type="email" 
+                    placeholder="Your email" 
+                    className="rounded-0 border-0"
+                    style={{ 
+                      fontFamily: "'Comfortaa', cursive",
+                      backgroundColor: 'rgba(255,255,255,0.9)'
+                    }}
+                  />
+                  <Button 
+                    variant="primary" 
+                    className="rounded-0"
+                    style={{ 
+                      fontFamily: "'Comfortaa', cursive",
+                      backgroundColor: '#6f4e37',
+                      borderColor: '#6f4e37'
+                    }}
+                  >
+                    Subscribe
+                  </Button>
+                </Form>
+              </div>
+            </Col>
+          </Row>
+
+          {/* Copyright */}
           <hr className="my-4" style={{ borderColor: 'rgba(255,255,255,0.1)' }} />
-          <div className="text-center small">
-            &copy; {new Date().getFullYear()} Snowview Complex Academy. All rights reserved.
-          </div>
+          <Row>
+            <Col className="text-center">
+              <p className="small mb-2">
+                &copy; {new Date().getFullYear()} Snowview Complex Academy. All rights reserved.
+              </p>
+              <div className="d-flex justify-content-center gap-3">
+                <a href="#" className="text-white-50 text-decoration-none small hover-underline">Privacy Policy</a>
+                <a href="#" className="text-white-50 text-decoration-none small hover-underline">Terms of Service</a>
+                <a href="#" className="text-white-50 text-decoration-none small hover-underline">Sitemap</a>
+              </div>
+            </Col>
+          </Row>
         </Container>
       </footer>
 
@@ -331,13 +486,14 @@ const Home = () => {
           width: '60px',
           height: '60px',
           zIndex: 1000,
-          backgroundColor: '#25D366'
+          backgroundColor: '#25D366',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
         }}
         target="_blank"
         rel="noopener noreferrer"
         title="Chat with us on WhatsApp"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.1, boxShadow: '0 6px 16px rgba(0,0,0,0.3)' }}
+        whileTap={{ scale: 0.95 }}
       >
         <FaWhatsapp size={24} />
       </motion.a>

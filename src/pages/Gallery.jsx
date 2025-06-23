@@ -181,7 +181,7 @@ const Gallery = () => {
               fontSize: '1.1rem'
             }}
           >
-            Schedule a Visit via WhatsApp
+            Schedule a Visit
           </motion.button>
         </motion.div>
       </Container>
