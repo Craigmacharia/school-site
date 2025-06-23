@@ -210,30 +210,6 @@ Grade History / Notes: ${formData.grades}
 
 
 
-      {/* Floating WhatsApp Button */}
-      <motion.a
-        href="https://wa.me/254755453975"
-        className="btn btn-success shadow"
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          borderRadius: '50%',
-          padding: '15px 18px',
-          fontSize: '1.5rem',
-          zIndex: 1000,
-          backgroundColor: '#25D366'
-        }}
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Chat with us on WhatsApp"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        <i className="bi bi-whatsapp"></i>
-      </motion.a>
-    </div>
-  );
-};
+      
 
 export default Admissions;
