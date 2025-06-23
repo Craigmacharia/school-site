@@ -206,10 +206,151 @@ Grade History / Notes: ${formData.grades}
           </Col>
         </Row>
       </Container>
-      <hr></hr>
 
+      {/* Footer Section */}
+      <footer 
+        className="py-5 mt-5"
+        style={{ 
+          backgroundColor: '#4a3520',
+          color: 'white',
+          borderTop: '3px solid #6f4e37'
+        }}
+      >
+        <Container>
+          <Row className="g-4">
+            <Col lg={4} className="mb-4">
+              <div className="d-flex flex-column h-100">
+                <div className="d-flex align-items-center mb-3">
+                  <img 
+                    src="/h.jpg" 
+                    alt="School Logo" 
+                    style={{ 
+                      height: '60px', 
+                      width: 'auto',
+                      marginRight: '15px',
+                      borderRadius: '8px'
+                    }}
+                  />
+                  <h5 style={{ fontWeight: '600', margin: 0 }}>Snowview Complex Academy</h5>
+                </div>
+                
+                <div className="mb-4">
+                  <p style={{ lineHeight: '1.6' }}>
+                    A premier educational institution committed to academic excellence and holistic development.
+                  </p>
+                </div>
+                
+                <div className="contact-info">
+                  <div className="d-flex align-items-center mb-2">
+                    <i className="bi bi-geo-alt-fill me-2" style={{ color: '#d1c7b7' }}></i>
+                    <span>P.O. Box 12345, Nairobi, Kenya</span>
+                  </div>
+                  <div className="d-flex align-items-center mb-2">
+                    <i className="bi bi-telephone-fill me-2" style={{ color: '#d1c7b7' }}></i>
+                    <a href="tel:+254755453975" className="text-white text-decoration-none">+254 755 453 975</a>
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <i className="bi bi-envelope-fill me-2" style={{ color: '#d1c7b7' }}></i>
+                    <a href="mailto:admissions@snowview.edu" className="text-white text-decoration-none">admissions@snowview.edu</a>
+                  </div>
+                </div>
+              </div>
+            </Col>
 
+            <Col lg={4} className="mb-4">
+              <h5 className="mb-3" style={{ fontWeight: '600', color: '#d1c7b7' }}>Quick Links</h5>
+              <Row>
+                <Col sm={6}>
+                  <ul className="list-unstyled">
+                    <li className="mb-2">
+                      <a href="/" className="text-white text-decoration-none hover-underline">
+                        Home
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/admissions" className="text-white text-decoration-none hover-underline">
+                        Admissions
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/academics" className="text-white text-decoration-none hover-underline">
+                        Academics
+                      </a>
+                    </li>
+                  </ul>
+                </Col>
+                <Col sm={6}>
+                  <ul className="list-unstyled">
+                    <li className="mb-2">
+                      <a href="/downloads" className="text-white text-decoration-none hover-underline">
+                        Downloads
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/gallery" className="text-white text-decoration-none hover-underline">
+                        Gallery
+                      </a>
+                    </li>
+                    <li className="mb-2">
+                      <a href="/contact" className="text-white text-decoration-none hover-underline">
+                        Contact Us
+                      </a>
+                    </li>
+                  </ul>
+                </Col>
+              </Row>
+            </Col>
 
-      
+            <Col lg={4}>
+              <h5 className="mb-3" style={{ fontWeight: '600', color: '#d1c7b7' }}>Connect With Us</h5>
+              <div className="d-flex gap-2 mb-3">
+                {['facebook', 'twitter', 'instagram', 'youtube'].map((platform) => (
+                  <a 
+                    key={platform}
+                    href="#" 
+                    className="social-icon d-flex align-items-center justify-content-center"
+                    style={{
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '50%',
+                      backgroundColor: 'rgba(255,255,255,0.1)',
+                      color: 'white',
+                      transition: 'all 0.3s ease'
+                    }}
+                  >
+                    <i className={`bi bi-${platform}`}></i>
+                  </a>
+                ))}
+              </div>
+              <a 
+                href="https://wa.me/254755453975" 
+                className="btn btn-success mt-3"
+                style={{ fontFamily: "'Comfortaa', cursive" }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-whatsapp me-2"></i> Chat on WhatsApp
+              </a>
+            </Col>
+          </Row>
+
+          <hr className="my-4" style={{ borderColor: 'rgba(255,255,255,0.1)' }} />
+          
+          <Row>
+            <Col className="text-center">
+              <p className="small mb-2">
+                &copy; {new Date().getFullYear()} Snowview Complex Academy. All rights reserved.
+              </p>
+              <div className="d-flex justify-content-center gap-3">
+                <a href="#" className="text-white-50 text-decoration-none small">Privacy Policy</a>
+                <a href="#" className="text-white-50 text-decoration-none small">Terms of Service</a>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </footer>
+    </div>
+  );
+};
 
 export default Admissions;
