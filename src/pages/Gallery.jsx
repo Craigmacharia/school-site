@@ -4,22 +4,22 @@ import { motion } from 'framer-motion';
 import 'animate.css';
 
 const images = [
-  { src: '/k.jpg', caption: 'Our School Entrance', category: 'Campus', 
+  { src: '/out.png', caption: 'Our School Entrance', category: 'Campus', 
     description: 'The welcoming entrance to our beautiful school campus' },
-  { src: '/h.jpg', caption: 'Junior School Playground', category: 'Facilities',
+  { src: '/play.png', caption: 'Junior School Playground', category: 'Facilities',
     description: 'Our safe and colorful playground for junior students' },
-  { src: '/t.jpg', caption: 'Science Lab in Action', category: 'Academics',
+  { src: '/present.png', caption: 'Science Lab in Action', category: 'Academics',
     description: 'Students conducting experiments in our modern science lab' },
-  { src: '/h.jpg', caption: 'Smart Classroom Setup', category: 'Facilities',
+  { src: '/class1.png', caption: 'Smart Classroom Setup', category: 'Facilities',
     description: 'Technology-enhanced learning environment for 21st century education' },
-  { src: '/k.jpg', caption: 'Computer Lab', category: 'Facilities',
+  { src: '/comps.png', caption: 'Computer Lab', category: 'Facilities',
     description: 'State-of-the-art computer lab with modern equipment' },
-  { src: '/h.jpg', caption: 'Student Library', category: 'Facilities',
+  { src: '/library.png', caption: 'Student Library', category: 'Facilities',
     description: 'Well-stocked library to encourage reading and research' },
-  { src: '/t.jpg', caption: 'Cultural Day Showcase', category: 'Events',
+  { src: '/cultural.png', caption: 'Cultural Day Showcase', category: 'Events',
     description: 'Celebrating diversity through our annual cultural day' },
-  { src: '/h.jpg', caption: 'Our Peaceful Compound', category: 'Campus',
-    description: 'The serene environment that makes learning enjoyable' }
+  { src: '/dorms2.png', caption: 'Our Sleeping Quaters', category: 'Dorms',
+    description: 'The serene sleeping cubicles that makes resting easy' }
 ];
 
 const Gallery = () => {

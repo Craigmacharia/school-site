@@ -5,22 +5,40 @@ import { motion } from 'framer-motion';
 // Sample data - you can add real members here
 const boardMembers = [
   {
-    name: 'Mrs. Janet Wambui',
-    role: 'Chairperson',
+    name: 'Ms. Janet Warui',
+    role: 'Director',
     bio: 'Oversees school governance and strategic vision.',
-    image: '/t.jpg'
+    image: '/janet.png'
   },
   {
     name: 'Mr. David Otieno',
-    role: 'Treasurer',
-    bio: 'Manages the schools financial oversight and planning.',
-    image: '/k.jpg'
+    role: 'Head Teacher',
+    bio: 'Manages the schools day to activities and management.',
+    image: '/depa.png'
   },
   {
-    name: 'Mrs. Leah Kamau',
+    name: 'Mrs. Dee Mwenda',
+    role: 'Head of pta',
+    bio: 'Acts as the liaison between the school and parents.',
+    image: '/mama.png'
+  },
+  {
+    name: 'Mr. David Otieno',
+    role: 'School Psychiatrist',
+    bio: 'Manages the schools mental health for staff&students.',
+    image: '/doc.png'
+  },
+  {
+    name: 'Mr. John Lumbau',
+    role: 'School Financier',
+    bio: 'Provides the school with financial aid and support.',
+    image: '/sponsor.png'
+  },
+  {
+    name: 'Ms. Leah Kamau',
     role: 'Secretary',
     bio: 'Maintains records and communicates board decisions.',
-    image: '/h.jpg'
+    image: '/cos.png'
   }
 ];
 

@@ -10,6 +10,17 @@ import Board from './pages/Board';
 import Downloads from './pages/Downloads';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
+import Events from './pages/Events';
+import CulturalDay from "./pages/CulturalDay";
+import SportsDay from './pages/SportsDay';
+import MusicArt from './pages/MusicArt';
+import ParentTeacherMeeting from './pages/ParentTeacherMeeting'
+import PrizeGiving from './pages/PrizeGiving';
+import MuseumTrip from './pages/MuseumTrip'
+import EnvironmentWeek from './pages/EnvironmentWeek';
+import Academics from './pages/Academics';
+import About from './pages/About';
+import ScienceFair from './pages/ScienceFair'
 
 const App = () => {
   return (
@@ -25,7 +36,7 @@ const App = () => {
         <Container>
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
             <img
-              src="/h.jpg" // Replace with your logo
+              src="/logox.png" // Replace with your logo
               alt="School Logo"
               style={{
                 height: '40px',
@@ -140,6 +151,17 @@ const App = () => {
         <Route path="/board" element={<Board />} />
         <Route path="/downloads" element={<Downloads />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/cultural-day" element={<CulturalDay />} />
+        <Route path="/events/science-fair" element={<ScienceFair />} />
+        <Route path="/events/sports-day" element={<SportsDay />} />
+        <Route path="/events/music-arts" element={<MusicArt />} />
+        <Route path="/events/parent-teacher-meeting" element={<ParentTeacherMeeting />} />
+        <Route path="/events/prize-giving" element={<PrizeGiving />} />
+        <Route path="/events/nairobi-museum-trip" element={<MuseumTrip />} />
+        <Route path="/events/environment-week" element={<EnvironmentWeek />} />
+        <Route path="/academics" element={<Academics />} />
+        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
