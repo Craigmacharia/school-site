@@ -271,15 +271,11 @@ const Home = () => {
         <Row>
           <Col sm={6}>
             <ul className="list-unstyled">
-              <li className="mb-2">
-                <a href="/" className="text-white text-decoration-none">Home</a>
-              </li>
+              
               <li className="mb-2">
                 <a href="/about" className="text-white text-decoration-none">About Us</a>
               </li>
-              <li className="mb-2">
-                <a href="/admissions" className="text-white text-decoration-none">Admissions</a>
-              </li>
+              
               <li className="mb-2">
                 <a href="/academics" className="text-white text-decoration-none">Academics</a>
               </li>
@@ -290,15 +286,11 @@ const Home = () => {
               <li className="mb-2">
                 <a href="/downloads" className="text-white text-decoration-none">Downloads</a>
               </li>
-              <li className="mb-2">
-                <a href="/gallery" className="text-white text-decoration-none">Gallery</a>
-              </li>
+              
               <li className="mb-2">
                 <a href="/events" className="text-white text-decoration-none">News & Events</a>
               </li>
-              <li className="mb-2">
-                <a href="/contact" className="text-white text-decoration-none">Contact Us</a>
-              </li>
+              
             </ul>
           </Col>
         </Row>
