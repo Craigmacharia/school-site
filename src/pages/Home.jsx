@@ -8,8 +8,8 @@ const Home = () => {
   // Feature tiles data with minimalist icons
   const features = [
     {
-      title: "Academic Excellence",
-      description: "Consistent top performance in exams",
+      title: "Academic strife",
+      description: "Consistent top performance in the national exams",
       icon: <FaGraduationCap size={32} />
     },
     {
@@ -242,10 +242,10 @@ const Home = () => {
                 borderRadius: '8px'
               }}
             />
-            <h5 style={{ fontWeight: '600', margin: 0 }}>Snowview Complex Academy</h5>
+            <h5 style={{ fontWeight: '600', margin: 0 }}>Snowview Complex</h5>
           </div>
           <p style={{ lineHeight: '1.6' }}>
-            A premier educational institution committed to academic excellence and holistic development.
+            
           </p>
           <div className="mt-auto">
             <div className="d-flex align-items-center mb-2">
@@ -260,6 +260,7 @@ const Home = () => {
               <i className="bi bi-envelope-fill me-2" style={{ color: '#d1c7b7' }}></i>
               <a href="mailto:admissions@snowview.edu" className="text-white text-decoration-none">admissions@snowview.edu</a>
             </div>
+            
           </div>
         </div>
       </Col>

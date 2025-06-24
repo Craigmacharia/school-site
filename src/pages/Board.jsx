@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 // Sample data - you can add real members here
 const boardMembers = [
   {
-    name: 'Ms. Janet Warui',
+    name: 'Prof. Janet Warui',
     role: 'Director',
     bio: 'Oversees school governance and strategic vision.',
     image: '/janet.png'
@@ -23,13 +23,13 @@ const boardMembers = [
     image: '/mama.png'
   },
   {
-    name: 'Mr. David Otieno',
+    name: 'Dr. Mark Mavado',
     role: 'School Psychiatrist',
     bio: 'Manages the schools mental health for staff&students.',
     image: '/doc.png'
   },
   {
-    name: 'Mr. John Lumbau',
+    name: 'H.E. John Lumbau',
     role: 'School Financier',
     bio: 'Provides the school with financial aid and support.',
     image: '/sponsor.png'
