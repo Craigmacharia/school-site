@@ -72,6 +72,7 @@ const App = () => {
                 </Nav.Link>
               </motion.div>
               
+              
               <motion.div whileHover={{ scale: 1.05 }}>
                 <Nav.Link 
                   as={Link} 
@@ -145,6 +146,7 @@ const App = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <br></br>
 
       <Routes>
         <Route path="/" element={<Home />} />
