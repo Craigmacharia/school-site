@@ -48,7 +48,8 @@ const App = () => {
             <span style={{ 
               fontFamily: "'Comfortaa', cursive",
               fontWeight: '700',
-              color: 'white'
+              color: 'white',
+              fontSize: '15px',
             }}>
               Snowview Complex
             </span>
