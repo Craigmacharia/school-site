@@ -20,6 +20,7 @@ import MuseumTrip from './pages/MuseumTrip'
 import EnvironmentWeek from './pages/EnvironmentWeek';
 import Academics from './pages/Academics';
 import About from './pages/About';
+import Staff from './pages/Staff';
 import ScienceFair from './pages/ScienceFair'
 
 const App = () => {
@@ -165,6 +166,7 @@ const App = () => {
         <Route path="/events/environment-week" element={<EnvironmentWeek />} />
         <Route path="/academics" element={<Academics />} />
         <Route path="/about" element={<About />} />
+        <Route path="/staff" element={<Staff />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

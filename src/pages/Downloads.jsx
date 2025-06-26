@@ -1,48 +1,77 @@
-import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Row, Col, Card, Button, Modal } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { FaFilePdf, FaDownload } from 'react-icons/fa';
+import { FaFilePdf, FaDownload, FaTimes, FaExternalLinkAlt } from 'react-icons/fa';
 
 const downloads = [
   {
     title: 'Junior School Application Form',
-    file: '/downloads/junior_application.pdf',
+    file: '/WANJAMA CRAIG MACHARIA.pdf',
     description: 'Form for students applying to Junior School (Grades 1-6)',
-    icon: <FaFilePdf size={24} />
+    icon: <FaFilePdf size={24} />,
+    type: 'pdf'
   },
   {
     title: 'Senior School Application Form',
-    file: '/downloads/senior_application.pdf',
+    file: '/tst.pdf',
     description: 'Form for students applying to Senior School (Grades 7-12)',
-    icon: <FaFilePdf size={24} />
+    icon: <FaFilePdf size={24} />,
+    type: 'pdf'
   },
   {
-    title: 'Fee Structure (All Classes)Form',
-    file: '/downloads/fee_structure.pdf',
+    title: 'Fee Structure (All Classes)',
+    file: '/tst2.pdf',
     description: 'Detailed breakdown of tuition and related costs for all grades',
-    icon: <FaFilePdf size={24} />
+    icon: <FaFilePdf size={24} />,
+    type: 'pdf'
   },
   {
     title: 'School Leaflet',
-    file: '/downloads/school_leaflet.pdf',
+    file: '/tst.pdf',
     description: 'Comprehensive overview of our mission, programs, and facilities',
-    icon: <FaFilePdf size={24} />
+    icon: <FaFilePdf size={24} />,
+    type: 'pdf'
   },
   {
     title: 'Academic Calendar',
-    file: '/downloads/academic_calendar.pdf',
+    file: '/WANJAMA CRAIG MACHARIA.pdf',
     description: 'Important dates and events for the current academic year',
-    icon: <FaFilePdf size={24} />
+    icon: <FaFilePdf size={24} />,
+    type: 'pdf'
   },
   {
     title: 'School Uniform Policy',
-    file: '/downloads/uniform_policy.pdf',
+    file: '/tst2.pdf',
     description: 'Guidelines on approved school uniforms and dress code',
-    icon: <FaFilePdf size={24} />
+    icon: <FaFilePdf size={24} />,
+    type: 'pdf'
   }
 ];
 
 const Downloads = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [currentDoc, setCurrentDoc] = useState(null);
+
+  const handlePreview = (doc) => {
+    setCurrentDoc(doc);
+    setShowModal(true);
+  };
+
+  const handleClose = () => {
+    setShowModal(false);
+    setCurrentDoc(null);
+  };
+
+  const handleDownload = (file) => {
+    // This will trigger the browser's download behavior
+    const link = document.createElement('a');
+    link.href = file;
+    link.download = file.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div style={{ 
       fontFamily: "'Comfortaa', cursive",
@@ -88,34 +117,101 @@ const Downloads = () => {
                     <Card.Text style={{ flex: 1 }}>
                       {doc.description}
                     </Card.Text>
-                    <motion.div
-                      whileHover={{ scale: 1.03 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      <Button
-                        variant="outline-primary"
-                        href={doc.file}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        download
-                        style={{ 
-                          fontFamily: "'Comfortaa', cursive",
-                          borderColor: '#6f4e37',
-                          color: 'white',
-                          backgroundColor: '#6f4e37',
-                          alignSelf: 'flex-start'
-                        }}
+                    <div className="d-flex gap-2">
+                      <motion.div
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
                       >
-                        <FaDownload className="me-2" />
-                        Download
-                      </Button>
-                    </motion.div>
+                        <Button
+                          variant="outline-primary"
+                          onClick={() => handlePreview(doc)}
+                          style={{ 
+                            fontFamily: "'Comfortaa', cursive",
+                            borderColor: '#6f4e37',
+                            color: '#6f4e37',
+                            backgroundColor: 'transparent'
+                          }}
+                        >
+                          <FaExternalLinkAlt className="me-2" />
+                          Preview
+                        </Button>
+                      </motion.div>
+                      <motion.div
+                        whileHover={{ scale: 1.03 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <Button
+                          variant="outline-primary"
+                          onClick={() => handleDownload(doc.file)}
+                          style={{ 
+                            fontFamily: "'Comfortaa', cursive",
+                            borderColor: '#6f4e37',
+                            color: 'white',
+                            backgroundColor: '#6f4e37'
+                          }}
+                        >
+                          <FaDownload className="me-2" />
+                          Download
+                        </Button>
+                      </motion.div>
+                    </div>
                   </Card.Body>
                 </Card>
               </motion.div>
             </Col>
           ))}
         </Row>
+
+        {/* Preview Modal */}
+        <Modal show={showModal} onHide={handleClose} size="lg" centered>
+          <Modal.Header closeButton style={{ borderColor: '#6f4e37' }}>
+            <Modal.Title style={{ color: '#6f4e37' }}>
+              {currentDoc?.title}
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body style={{ minHeight: '60vh' }}>
+            {currentDoc?.type === 'pdf' ? (
+              <embed 
+                src={currentDoc?.file} 
+                type="application/pdf" 
+                width="100%" 
+                height="100%" 
+                style={{ minHeight: '60vh' }}
+              />
+            ) : (
+              <div className="text-center py-5">
+                <FaFilePdf size={48} className="text-muted mb-3" />
+                <p>This document type cannot be previewed. Please download to view.</p>
+              </div>
+            )}
+          </Modal.Body>
+          <Modal.Footer style={{ borderColor: '#6f4e37' }}>
+            <Button 
+              variant="outline-secondary" 
+              onClick={handleClose}
+              style={{ 
+                fontFamily: "'Comfortaa', cursive",
+                borderColor: '#6f4e37',
+                color: '#6f4e37'
+              }}
+            >
+              <FaTimes className="me-2" />
+              Close
+            </Button>
+            <Button 
+              variant="primary" 
+              onClick={() => handleDownload(currentDoc?.file)}
+              style={{ 
+                fontFamily: "'Comfortaa', cursive",
+                backgroundColor: '#6f4e37',
+                borderColor: '#6f4e37'
+              }}
+            >
+              <FaDownload className="me-2" />
+              Download
+            </Button>
+          </Modal.Footer>
+        </Modal>
 
         {/* Additional Info Section */}
         <motion.div

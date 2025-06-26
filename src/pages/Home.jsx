@@ -175,13 +175,13 @@ const Home = () => {
               <div className="ratio ratio-16x9">
                 <img 
                   className="d-block w-100" 
-                  src="/pupils.png" 
+                  src="/games.png" 
                   alt="Students in classroom" 
                   style={{ objectFit: 'cover' }}
                 />
               </div>
               <Carousel.Caption className="bg-dark bg-opacity-50 p-1 rounded">
-                <h5>Learning</h5>
+                <h5>Games</h5>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -201,13 +201,13 @@ const Home = () => {
               <div className="ratio ratio-16x9">
                 <img 
                   className="d-block w-100" 
-                  src="/t.jpg" 
+                  src="/lib.png" 
                   alt="Sports field" 
                   style={{ objectFit: 'cover' }}
                 />
               </div>
               <Carousel.Caption className="bg-dark bg-opacity-50 p-1 rounded">
-                <h5>Facilities</h5>
+                <h5>Studys</h5>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
@@ -275,6 +275,9 @@ const Home = () => {
               <li className="mb-2">
                 <a href="/about" className="text-white text-decoration-none">About Us</a>
               </li>
+              <li className="mb-2">
+                <a href="/events" className="text-white text-decoration-none">News & Events</a>
+              </li>
               
               <li className="mb-2">
                 <a href="/academics" className="text-white text-decoration-none">Academics</a>
@@ -291,6 +294,9 @@ const Home = () => {
                 <a href="/events" className="text-white text-decoration-none">News & Events</a>
               </li>
               
+              <li className="mb-2">
+                <a href="/staff" className="text-white text-decoration-none">Staff</a>
+              </li>
             </ul>
           </Col>
         </Row>
